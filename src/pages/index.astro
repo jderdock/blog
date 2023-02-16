@@ -4,6 +4,7 @@ import BlogPost from "../components/BlogPost.astro";
 import { getCollection } from "astro:content";
 // Get all entries from a collection. Requires the name of the collection as an argument.
 const allBlogPosts = await getCollection("blog");
+allBlogPosts.sort((a, b) => b.data.date - a.data.date);
 const pageTitle = "About Me";
 ---
 
@@ -24,6 +25,7 @@ const pageTitle = "About Me";
   <section>
     <h1>Recent Blog Posts</h1>
     <ul>
+      s
       {
         allBlogPosts.map((blogPostEntry) => (
           <li>

@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 // Get all entries from a collection. Requires the name of the collection as an argument.
 const allBlogPosts = await getCollection("blog");
+allBlogPosts.sort((a, b) => b.data.date - a.data.date);
 
 const pageTitle = "Blog";
 ---
