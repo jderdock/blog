@@ -1,9 +1,8 @@
 ---
 title: Steve Hauschildt - Dissolvi
-date: "2019-03-18T01:01:00+04:00"
-layout: "../../layouts/MarkdownPostLayout.astro"
+date: 2019-03-18T01:01:00+04:00
 draft: false
-slug: "/posts/steve-hauschildt-dissolvi/"
+slug: steve-hauschildt-dissolvi
 description: "The defunct band Emeralds hold a special place in my listening history. 2007’s Allegory of Allergies was a good change of pace from the dark dirge of mid-2000’s pedal-worship drone..."
 ---
 

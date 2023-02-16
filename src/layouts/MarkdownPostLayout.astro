@@ -5,7 +5,7 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={frontmatter.title}>
   <h1>{frontmatter.title}</h1>
-  <date>{frontmatter.date.slice(0, 10)}</date>
+  <date>{frontmatter.date}</date>
   <slot />
   <a href="/blog/">Back to blog</a>
 </BaseLayout>

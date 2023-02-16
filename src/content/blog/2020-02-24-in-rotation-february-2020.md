@@ -1,7 +1,6 @@
 ---
-layout: "../../layouts/MarkdownPostLayout.astro"
 title: In Rotation | February 2020
-slug: /posts/in-rotation-february-2020
+slug: in-rotation-february-2020
 draft: false
 date: 2020-02-24T17:31:16.622Z
 description: "Beatrice Dillon, China: Music Of The Pipa, Sunwatchers, Six Organs, Jeff Parker, Ernest Hood"

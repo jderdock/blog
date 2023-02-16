@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+import { getCollection } from "astro:content";
+// Get all entries from a collection. Requires the name of the collection as an argument.
+const allBlogPosts = await getCollection("blog");
 const pageTitle = "About Me";
 ---
 
@@ -19,9 +23,20 @@ const pageTitle = "About Me";
 
   <section>
     <h1>Recent Blog Posts</h1>
-    <div><h2>Blog Post Title #1</h2><date>01.01.2023</date></div>
-    <div><h2>Blog Post Title #2</h2><date>01.01.2023</date></div>
-    <div><h2>Blog Post Title #3</h2><date>01.01.2023</date></div>
+    <ul>
+      {
+        allBlogPosts.map((blogPostEntry) => (
+          <li>
+            <a href={`/posts/${blogPostEntry.slug}`}>
+              {blogPostEntry.data.title}
+            </a>
+            <time datetime={blogPostEntry.data.date.toISOString()}>
+              {blogPostEntry.data.date.toDateString()}
+            </time>
+          </li>
+        ))
+      }
+    </ul>
     <a href="/blog/">Visit the full blog</a>
   </section>
 </BaseLayout>

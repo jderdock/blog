@@ -1,9 +1,8 @@
 ---
 title: How To Migrate from ExpressionEngine 5 to Craft CMS
-date: "2019-08-12T01:01:00+04:00"
-layout: "../../layouts/MarkdownPostLayout.astro"
+date: 2019-08-12T01:01:00+04:00
 draft: false
-slug: "/posts/how-to-migrate-from-expressionengine5-to-craft/"
+slug: how-to-migrate-from-expressionengine5-to-craft
 description: "A simple guide on how to migrate from ExpressionEngine 5 to Craft CMS"
 ---
 

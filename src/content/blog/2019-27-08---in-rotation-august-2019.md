@@ -1,9 +1,8 @@
 ---
 title: In Rotation | August 2019
-date: "2019-08-27T01:01:00+04:00"
-layout: "../../layouts/MarkdownPostLayout.astro"
+date: 2019-08-27T01:01:00+04:00
 draft: false
-slug: "/posts/august-2019-in-rotation/"
+slug: august-2019-in-rotation
 description: "75 Dollar Bill, Rainforest Spiritual Enslavement, Nils Frahm, Wet Tuna..."
 ---
 
