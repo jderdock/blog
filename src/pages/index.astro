@@ -1,15 +1,27 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "About Me";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <section>
+    <h1>{pageTitle}</h1>
+    <p>Husband, father of two, software engineer, hi-fi gear and music nerd.</p>
+    <p>
+      This blog is a place for me to try out new software, technologies and
+      trends in web development. This iteration of this blog is built with <a
+        href="https://astro.build/">Astro</a
+      > (previous version was built with <a href="https://www.gatsbyjs.com/"
+        >Gatsby</a
+      >).
+    </p>
+  </section>
+
+  <section>
+    <h1>Recent Blog Posts</h1>
+    <div><h2>Blog Post Title #1</h2><date>01.01.2023</date></div>
+    <div><h2>Blog Post Title #2</h2><date>01.01.2023</date></div>
+    <div><h2>Blog Post Title #3</h2><date>01.01.2023</date></div>
+    <a href="/blog/">Visit the full blog</a>
+  </section>
+</BaseLayout>
