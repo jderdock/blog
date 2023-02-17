@@ -24,21 +24,22 @@ const pageTitle = "About Me";
 
   <section>
     <h1>Recent Blog Posts</h1>
-    <ul>
-      s
+    <div>
       {
         allBlogPosts.map((blogPostEntry) => (
-          <li>
-            <a href={`/posts/${blogPostEntry.slug}`}>
-              {blogPostEntry.data.title}
-            </a>
+          <article>
+            <h1>
+              <a href={`/posts/${blogPostEntry.slug}`}>
+                {blogPostEntry.data.title}
+              </a>
+            </h1>
             <time datetime={blogPostEntry.data.date.toISOString()}>
               {blogPostEntry.data.date.toDateString()}
             </time>
-          </li>
+          </article>
         ))
       }
-    </ul>
+    </div>
     <a href="/blog/">Visit the full blog</a>
   </section>
 </BaseLayout>
