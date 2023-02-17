@@ -9,8 +9,8 @@ const pageTitle = "About Me";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <section>
-    <h1>{pageTitle}</h1>
+  <section class="mb-6">
+    <h1 class="text-xl pb-4">{pageTitle}</h1>
     <p>Husband, father of two, software engineer, hi-fi gear and music nerd.</p>
     <p>
       This blog is a place for me to try out new software, technologies and
@@ -23,23 +23,24 @@ const pageTitle = "About Me";
   </section>
 
   <section>
-    <h1>Recent Blog Posts</h1>
-    <div>
-      {
-        allBlogPosts.map((blogPostEntry) => (
-          <article>
-            <h1>
-              <a href={`/posts/${blogPostEntry.slug}`}>
-                {blogPostEntry.data.title}
-              </a>
-            </h1>
-            <time datetime={blogPostEntry.data.date.toISOString()}>
-              {blogPostEntry.data.date.toDateString()}
-            </time>
-          </article>
-        ))
-      }
-    </div>
-    <a href="/blog/">Visit the full blog</a>
+    <h2 class="text-lg uppercase mb-4">Recent Blog Posts</h2>
+    {
+      allBlogPosts.map((blogPostEntry) => (
+        <article class="mb-4">
+          <h1 class="text-lg">
+            <a href={`/posts/${blogPostEntry.slug}`}>
+              {blogPostEntry.data.title}
+            </a>
+          </h1>
+          <time
+            class="text-sm"
+            datetime={blogPostEntry.data.date.toISOString()}
+          >
+            {blogPostEntry.data.date.toDateString()}
+          </time>
+        </article>
+      ))
+    }
   </section>
+  <a href="/blog/" class="uppercase">Visit the full blog</a>
 </BaseLayout>
